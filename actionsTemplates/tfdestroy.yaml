@@ -22,7 +22,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: terraform destroy
-        uses: azurenoops/terraform-github-actions/terraform-destroy@v1.34.2
+        uses: POps-Rox/terraform-gh-actions/terraform-destroy@v1.0.0
         with:
           path: ${{github.event.inputs.TF_DIR}}
           backend_config: |

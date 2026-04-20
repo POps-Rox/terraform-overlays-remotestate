@@ -42,7 +42,7 @@ jobs:
               ;;
           esac
       - name: terraform apply
-        uses: azurenoops/terraform-github-actions/terraform-apply@v1.34.2
+        uses: POps-Rox/terraform-gh-actions/terraform-apply@v1.0.0
         with: 
           path: ${{ env.SRC_PATH}}
           backend_config: |
