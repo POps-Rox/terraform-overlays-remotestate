@@ -21,8 +21,10 @@ jobs:
             -   name: Checkout
                 uses: actions/checkout@v3
             -   name: Check Pull
+                env:
+                    PR_TITLE: ${{ github.event.pull_request.title }}
                 run: |
-                    case "${{ github.event.pull_request.title }}" in
+                    case "$PR_TITLE" in
                         *"[workspace short-code]"*)
                             echo "Setting TF_KEY and SRC to match [workspace short-code] case"
                             echo "TF_KEY=${{ secrets.AZURE_[workspace short-code]_KEY }}" >> $GITHUB_ENV

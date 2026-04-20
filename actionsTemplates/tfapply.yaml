@@ -20,8 +20,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Check Commit
+        env:
+          COMMIT_MSG: ${{ github.event.head_commit.message }}
         run: |
-          case "${{ github.event.head_commit.message}}" in
+          case "$COMMIT_MSG" in
             *"[workload short-code]"*)
               echo "Setting TF_KEY and SRC to match [workload short-code] case"
               echo "TF_KEY=${{ secrets.AZURE_[workload short-code]_KEY }}" >> $GITHUB_ENV
