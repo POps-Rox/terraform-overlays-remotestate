@@ -64,8 +64,8 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "~> 3.22"
     }
-    azurenoopsutils = {
-      source  = "azurenoops/azurenoopsutils"
+    popsrox = {
+      source  = "POps-Rox/azutils"
       version = "~> 1.0"
     }
   }

@@ -7,7 +7,7 @@
 <!-- BADGES:END -->
 
 # Azure Remote-State Accelerator Terraform Overlay
-[![Changelog](https://img.shields.io/badge/changelog-release-green.svg)](CHANGELOG.md) [![Notice](https://img.shields.io/badge/notice-copyright-yellow.svg)](NOTICE) [![MIT License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE) [![TF Registry](https://img.shields.io/badge/terraform-registry-blue.svg)](https://registry.terraform.io/modules/azurenoops/overlays-template/azurerm/)
+[![Changelog](https://img.shields.io/badge/changelog-release-green.svg)](CHANGELOG.md) [![Notice](https://img.shields.io/badge/notice-copyright-yellow.svg)](NOTICE) [![MIT License](https://img.shields.io/badge/license-MIT-orange.svg)](LICENSE) [![TF Registry](https://img.shields.io/badge/terraform-registry-blue.svg)](https://registry.terraform.io/modules/POps-Rox/overlays-remotestate/azurerm/)
 
 Terraform Module with GitHub Actions templates intended to lower development, testing, and deployment.
 
@@ -126,8 +126,8 @@ terraform {
       source  = "hashicorp/azurerm"
       version = "~> 3.116"
     }
-    azurenoopsutils = {
-      source  = "POps-Rox/azurenoopsutils"
+    popsrox-utils = {
+      source  = "POps-Rox/azutils"
       version = "~> 1.0"
     }
   }
