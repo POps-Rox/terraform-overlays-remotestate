@@ -2,7 +2,7 @@
 # Licensed under the MIT License.
 
 # Resource Group NoOpsUtils
-resource "azurenoopsutils_resource_name" "rg" {
+resource "popsrox_resource_name" "rg" {
   name          = "resourcegroup"
   resource_type = "azurerm_resource_group"
   prefixes      = [var.org_name, local.environment, var.workload_name]
@@ -13,7 +13,7 @@ resource "azurenoopsutils_resource_name" "rg" {
 }
 
 # Storage Account NoOpsUtils
-resource "azurenoopsutils_resource_name" "sa" {
+resource "popsrox_resource_name" "sa" {
   name          = "sa"
   resource_type = "azurerm_storage_account"
   prefixes      = [var.org_name, local.environment, var.workload_name]
@@ -23,7 +23,7 @@ resource "azurenoopsutils_resource_name" "sa" {
 }
 
 # Storage Container NoOpsUtils
-resource "azurenoopsutils_resource_name" "sc" {
+resource "popsrox_resource_name" "sc" {
   name          = "sc"
   resource_type = "azurerm_storage_container"
   prefixes      = [var.org_name, local.environment, var.workload_name]
